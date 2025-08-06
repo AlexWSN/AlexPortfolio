@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 const certificates = [
-  "/certificates/certificate1.png",
-  "/certificates/certificate2.png",
-  "/certificates/certificate3.png",
+  `${process.env.PUBLIC_URL}/certificates/certificate1.png`,
+  `${process.env.PUBLIC_URL}/certificates/certificate2.png`,
+  `${process.env.PUBLIC_URL}/certificates/certificate3.png`,
 ];
 
 const Certificate = () => {

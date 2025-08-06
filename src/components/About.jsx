@@ -120,7 +120,7 @@ export default function About() {
         <div>
           <div className="flex flex-col items-center gap-4 mb-6">
             <img
-              src="/images/sheldon.jpeg"
+              src={`${process.env.PUBLIC_URL}/images/sheldon.jpeg`}
               alt="Sheldon"
               className="rounded-full w-40 h-40 object-cover shadow-lg"
             />
@@ -167,7 +167,7 @@ export default function About() {
                 {paintings.map((img, index) => (
                   <img
                     key={img}
-                    src={`/images/${img}.jpeg`}
+                    src={`${process.env.PUBLIC_URL}/images/${img}.jpeg`}
                     alt={img}
                     className="w-full h-40 object-cover rounded-xl shadow-lg hover:scale-105 cursor-pointer"
                     onClick={() => openLightbox("paintings", index)}
@@ -186,7 +186,7 @@ export default function About() {
                 {models.map((img, index) => (
                   <img
                     key={img}
-                    src={`/images/${img}.jpeg`}
+                    src={`${process.env.PUBLIC_URL}/images/${img}.jpeg`}
                     alt={img}
                     className="w-full h-40 object-cover rounded-xl shadow-lg hover:scale-105 cursor-pointer"
                     onClick={() => openLightbox("models", index)}
@@ -214,7 +214,7 @@ export default function About() {
             ‹
           </button>
           <img
-            src={`/images/${currentImages[lightbox.index]}.jpeg`}
+            src={`${process.env.PUBLIC_URL}/images/${currentImages[lightbox.index]}.jpeg`}
             alt="zoom"
             className="max-w-[90vw] max-h-[80vh] rounded-xl shadow-2xl"
           />
