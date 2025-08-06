@@ -5,7 +5,10 @@ export default function Projects() {
     {
       title: "IceCream",
       desc: "Responsive website using Parcel, SCSS, and JavaScript.",
-      links: [{ label: "Repo", href: "https://github.com/AlexWSN/IceCream" }],
+      links: [
+        { label: "Repo", href: "https://github.com/AlexWSN/IceCreamProject" },
+        { label: "Live", href: "https://alexwsn.github.io/IceCreamProject/" },
+      ],
     },
     {
       title: "Scary Frog Graphics",
@@ -20,9 +23,9 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="w-full bg-[#151515] py-16 px-4 text-gray-300"
+      className="w-full bg-[#151515] py-12 px-4 text-gray-300 flex flex-col justify-start min-h-[70vh]"
       data-aos="fade-up">
-      <div className="w-full px-10 lg:px-32 xl:px-48 mx-auto">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <header className="text-center mb-12">
           <h2 className="text-4xl font-bold text-[#00df9a] mb-2">Projects</h2>
           <p className="text-gray-400">

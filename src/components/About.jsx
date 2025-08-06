@@ -46,7 +46,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="max-w-7xl mx-auto px-6 py-12 bg-black/40 backdrop-blur-md rounded-2xl text-white shadow-md relative z-10"
+      className="max-w-7xl mx-auto px-6 py-8 bg-black/40 backdrop-blur-md rounded-2xl text-white shadow-md relative z-10 flex flex-col justify-start min-h-[80vh]"
       data-aos="fade-up">
       {/* Mobile SVG Separator */}
       <div className="relative mb-10 block md:hidden">
@@ -70,7 +70,7 @@ export default function About() {
         <div>
           <div className="flex flex-col items-center gap-4 mb-6">
             <img
-              src="/images/alexandra.jpeg"
+              src="/images/alexandra2.jpeg"
               alt="Alexandra Sasu"
               className="rounded-full w-40 h-40 object-cover shadow-lg"
             />
