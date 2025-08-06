@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/AlexPortfolio/static/css/main.fa5143cc.css",
+    "main.js": "/AlexPortfolio/static/js/main.fb239713.js",
+    "index.html": "/AlexPortfolio/index.html",
+    "main.fa5143cc.css.map": "/AlexPortfolio/static/css/main.fa5143cc.css.map",
+    "main.fb239713.js.map": "/AlexPortfolio/static/js/main.fb239713.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fa5143cc.css",
+    "static/js/main.fb239713.js"
+  ]
+}
