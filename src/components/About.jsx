@@ -70,7 +70,7 @@ export default function About() {
         <div>
           <div className="flex flex-col items-center gap-4 mb-6">
             <img
-              src="/images/alexandra2.jpeg"
+              src={`${process.env.PUBLIC_URL}/images/alexandra2.jpeg`}
               alt="Alexandra Sasu"
               className="rounded-full w-40 h-40 object-cover shadow-lg"
             />
