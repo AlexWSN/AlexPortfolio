@@ -51,9 +51,7 @@ export default function Experience() {
         </p>
         <div>
           <a
-            href={
-              "${process.env.PUBLIC_URL}/certificates/previous-experience.pdf"
-            }
+            href={`${process.env.PUBLIC_URL}/certificates/previous-experience.pdf`}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-black text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto md:mx-0 py-3 inline-block text-center">
