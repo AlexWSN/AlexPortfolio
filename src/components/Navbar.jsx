@@ -10,7 +10,9 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-0 left-0 w-full flex justify-between items-center h-20 px-4 text-white bg-black bg-opacity-60 z-50">
-      <h1 className="text-3xl font-bold text-[#00df9a]">ALEX.</h1>
+      <a href="#top" className="text-3xl font-bold text-[#00df9a]">
+        ALEX.
+      </a>
 
       <ul className="hidden md:flex">
         <li className="p-4">
