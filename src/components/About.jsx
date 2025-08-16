@@ -201,34 +201,36 @@ export default function About() {
       {/* Lightbox */}
       {lightbox.open && (
         <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4">
-          <button
-            onClick={closeLightbox}
-            className="absolute top-[20%] right-16 text-white text-3xl font-bold hover:text-[#00df9a] z-50"
-            aria-label="Close">
-            ✕
-          </button>
+          <div className="relative">
+            <img
+              src={`${process.env.PUBLIC_URL}/images/${
+                currentImages[lightbox.index]
+              }.jpeg`}
+              alt="zoom"
+              className="max-w-[90vw] max-h-[80vh] rounded-xl shadow-2xl"
+            />
 
-          <button
-            onClick={prevImage}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-4xl hover:text-[#00df9a] z-50"
-            aria-label="Previous">
-            ‹
-          </button>
+            <button
+              onClick={closeLightbox}
+              className="absolute top-2 right-2 md:top-4 md:right-4 text-white text-3xl font-bold hover:text-[#00df9a] z-50"
+              aria-label="Close">
+              ✕
+            </button>
 
-          <img
-            src={`${process.env.PUBLIC_URL}/images/${
-              currentImages[lightbox.index]
-            }.jpeg`}
-            alt="zoom"
-            className="max-w-[90vw] max-h-[80vh] rounded-xl shadow-2xl"
-          />
+            <button
+              onClick={prevImage}
+              className="absolute left-2 top-1/2 transform -translate-y-1/2 text-white text-4xl hover:text-[#00df9a] z-50"
+              aria-label="Previous">
+              ‹
+            </button>
 
-          <button
-            onClick={nextImage}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-4xl hover:text-[#00df9a] z-50"
-            aria-label="Next">
-            ›
-          </button>
+            <button
+              onClick={nextImage}
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 text-white text-4xl hover:text-[#00df9a] z-50"
+              aria-label="Next">
+              ›
+            </button>
+          </div>
         </div>
       )}
     </section>
