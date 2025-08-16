@@ -7,23 +7,19 @@ import Certificate from "./components/Certificate";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 
-
 function App() {
-  const backgroundStyle = {
-    backgroundImage: `url(${process.env.PUBLIC_URL}/images/background.jpg)`,
-    backgroundAttachment: "fixed",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-    minHeight: "100vh",
-    position: "relative",
-    overflow: "hidden",
-  };
-
   return (
     <>
       <Navbar />
-      <div style={backgroundStyle}>
+      {/* Container background */}
+      <div className="relative min-h-screen overflow-hidden">
+        {/* Imaginea de background */}
+        <img
+          src={`${process.env.PUBLIC_URL}/images/background.jpg`}
+          alt="background"
+          className="fixed top-0 left-0 w-full h-full object-cover -z-10"
+        />
+
         <div className="pt-20 relative">
           <Hero />
           <About />
@@ -36,5 +32,6 @@ function App() {
     </>
   );
 }
+
 
 export default App;
