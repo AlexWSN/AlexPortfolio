@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export default function About() {
-  const [selectedSection, setSelectedSection] = useState("who");
+  const [selectedSection, setSelectedSection] = useState(null);
   const [showGallerySection, setShowGallerySection] = useState(null);
   const [lightbox, setLightbox] = useState({
     open: false,
@@ -81,7 +81,9 @@ export default function About() {
 
           <div className="flex gap-4 mb-4 flex-wrap justify-center">
             <button
-              onClick={() => setSelectedSection("who")}
+              onClick={() =>
+                setSelectedSection(selectedSection === "who" ? "" : "who")
+              }
               className={`px-5 py-2 rounded-full font-semibold shadow transition-all ${
                 selectedSection === "who"
                   ? "bg-[#00df9a] text-black"
@@ -89,8 +91,11 @@ export default function About() {
               }`}>
               Who am I
             </button>
+
             <button
-              onClick={() => setSelectedSection("what")}
+              onClick={() =>
+                setSelectedSection(selectedSection === "what" ? "" : "what")
+              }
               className={`px-5 py-2 rounded-full font-semibold shadow transition-all ${
                 selectedSection === "what"
                   ? "bg-[#00df9a] text-black"
@@ -107,11 +112,6 @@ export default function About() {
                   ? `I had the pleasure of working for over 5 years as a supervisor in parental education. During this time, I was involved in meaningful and impactful projects, and I like to believe that, together with my team, we made a positive difference on a national level, collaborating with schools and educational institutions all across Romania. Still, I felt I hadn’t quite found my place. After completing an intensive one-year fullstack development course, I decided to transition into a field that felt closer to my heart, partly out of a desire to connect with people who share my mindset and passions.`
                   : `I love painting, it helps me stay grounded and expressive in ways words can't always reach. That’s why I’ve included a small selection of my artwork in this portfolio: it’s a glimpse into the way I see and feel the world. Music is my constant companion, mostly heavy metal (with a funky start to every morning), and visual creativity flows alongside it. I've always been fascinated by 3D modeling, especially character design. Over the past year, I’ve been learning Blender in my spare time, and I’ve added here a few of my early experiments with digital sculpting - raw, but made with joy. I’m the proud owner of a hope: that one day I’ll learn to play the cello beautifully and own a '90 Honda Prelude or/and Mercedes w123 Coupe.🤷‍♀️`}
               </p>
-              <button
-                onClick={() => setSelectedSection("")}
-                className="mt-0 text-[#00df9a] hover:underline absolute right-4 top-2">
-                Close
-              </button>
             </div>
           )}
         </div>
@@ -203,21 +203,26 @@ export default function About() {
         <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4">
           <button
             onClick={closeLightbox}
-            className="absolute top-6 right-6 text-white text-3xl font-bold hover:text-[#00df9a] z-50"
+            className="absolute top-[20%] right-16 text-white text-3xl font-bold hover:text-[#00df9a] z-50"
             aria-label="Close">
             ✕
           </button>
+
           <button
             onClick={prevImage}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-4xl hover:text-[#00df9a] z-50"
             aria-label="Previous">
             ‹
           </button>
+
           <img
-            src={`${process.env.PUBLIC_URL}/images/${currentImages[lightbox.index]}.jpeg`}
+            src={`${process.env.PUBLIC_URL}/images/${
+              currentImages[lightbox.index]
+            }.jpeg`}
             alt="zoom"
             className="max-w-[90vw] max-h-[80vh] rounded-xl shadow-2xl"
           />
+
           <button
             onClick={nextImage}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-4xl hover:text-[#00df9a] z-50"
